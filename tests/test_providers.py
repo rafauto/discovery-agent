@@ -26,11 +26,14 @@ def test_inline_schema_has_no_refs():
     assert criteria["items"]["properties"]["given"]["type"] == "string"
 
 
-@pytest.mark.parametrize("text", [
-    '{"a": 1}',
-    '```json\n{"a": 1}\n```',
-    'Sure! Here it is: {"a": 1} Hope it helps.',
-])
+@pytest.mark.parametrize(
+    "text",
+    [
+        '{"a": 1}',
+        '```json\n{"a": 1}\n```',
+        'Sure! Here it is: {"a": 1} Hope it helps.',
+    ],
+)
 def test_parse_json_text(text):
     assert parse_json_text(text) == {"a": 1}
 
@@ -43,10 +46,12 @@ class FakeAnthropic:
 
     def create(self, **kwargs):
         self.kwargs = kwargs
-        return SimpleNamespace(content=[
-            SimpleNamespace(type="text", text="thinking..."),
-            SimpleNamespace(type="tool_use", input=self.payload),
-        ])
+        return SimpleNamespace(
+            content=[
+                SimpleNamespace(type="text", text="thinking..."),
+                SimpleNamespace(type="tool_use", input=self.payload),
+            ]
+        )
 
 
 def test_claude_provider_forces_tool_use():

@@ -83,7 +83,9 @@ class OpportunityDraft(BaseModel):
     impact: int = Field(ge=1, le=5, description="Expected impact on users and business (1-5).")
     confidence: int = Field(ge=1, le=5, description="How strongly the evidence supports it (1-5).")
     effort: int = Field(ge=1, le=5, description="Rough effort to address it (1 = small, 5 = very large).")
-    rationale: str = Field(description="Why this matters, citing the evidence (frequency, severity, personas).")
+    rationale: str = Field(
+        description="Why this matters, citing the evidence (frequency, severity, personas)."
+    )
     hypothesis: str = Field(
         description="A testable hypothesis: 'We believe that <change> for <persona> will result in "
         "<outcome>. We will know when <signal>.'"

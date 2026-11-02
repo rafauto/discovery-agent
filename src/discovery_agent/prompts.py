@@ -6,9 +6,7 @@ Keeping them in one module makes them easy to review and iterate on.
 
 from __future__ import annotations
 
-LANGUAGE_RULE = (
-    "Write every field in {language}. Quotes must stay in the original language of the source."
-)
+LANGUAGE_RULE = "Write every field in {language}. Quotes must stay in the original language of the source."
 
 # --------------------------------------------------------------------------- #
 # Step 1 - extract pains
@@ -68,9 +66,7 @@ Rules:
 def cluster_prompt(pain_lines: str, context: str) -> str:
     ctx = f"Product context: {context}\n\n" if context else ""
     return (
-        f"{ctx}Pains (ID | persona | severity | statement):\n"
-        f"{pain_lines}\n\n"
-        "Group these pains into themes."
+        f"{ctx}Pains (ID | persona | severity | statement):\n{pain_lines}\n\nGroup these pains into themes."
     )
 
 

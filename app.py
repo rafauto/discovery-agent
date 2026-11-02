@@ -109,7 +109,11 @@ if run:
         provider = get_provider(provider_name, model=model, api_key=api_key)
         bar = st.progress(0.0, text="Starting…")
         report = run_discovery(
-            sources, provider, context=context, language=language, top_n=top_n,
+            sources,
+            provider,
+            context=context,
+            language=language,
+            top_n=top_n,
             stories_per_opportunity=stories_per,
             progress=lambda msg, frac: bar.progress(min(frac, 1.0), text=msg),
         )
@@ -142,11 +146,19 @@ if report:
         st.caption("Score = impact × confidence ÷ effort (1–5 each).")
         st.dataframe(
             [
-                {"ID": o.id, "Opportunity": o.title, "Themes": ", ".join(o.theme_ids), "Impact": o.impact,
-                 "Confidence": o.confidence, "Effort": o.effort, "Score": o.score}
+                {
+                    "ID": o.id,
+                    "Opportunity": o.title,
+                    "Themes": ", ".join(o.theme_ids),
+                    "Impact": o.impact,
+                    "Confidence": o.confidence,
+                    "Effort": o.effort,
+                    "Score": o.score,
+                }
                 for o in report.opportunities
             ],
-            hide_index=True, width="stretch",
+            hide_index=True,
+            width="stretch",
         )
         for o in report.opportunities:
             with st.expander(f"{o.id} · {o.title}  —  score {o.score}"):
@@ -180,11 +192,20 @@ if report:
             st.write(t.description)
             st.dataframe(
                 [
-                    {"Pain": p.id, "Persona": p.persona, "Severity": p.severity, "Statement": p.statement,
-                     "Quote": p.quote, "Verified": "✅" if p.quote_verified else "⚠️", "Source": p.source}
-                    for pid in t.pain_ids if (p := report.pain(pid))
+                    {
+                        "Pain": p.id,
+                        "Persona": p.persona,
+                        "Severity": p.severity,
+                        "Statement": p.statement,
+                        "Quote": p.quote,
+                        "Verified": "✅" if p.quote_verified else "⚠️",
+                        "Source": p.source,
+                    }
+                    for pid in t.pain_ids
+                    if (p := report.pain(pid))
                 ],
-                hide_index=True, width="stretch",
+                hide_index=True,
+                width="stretch",
             )
 
     with t_export:

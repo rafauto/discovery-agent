@@ -113,7 +113,10 @@ def _call(provider: BaseProvider, *, step: str, system: str, prompt: str, schema
 
 
 def extract_pains(
-    provider: BaseProvider, sources: list[Source], context: str = "", language: str = DEFAULT_LANGUAGE,
+    provider: BaseProvider,
+    sources: list[Source],
+    context: str = "",
+    language: str = DEFAULT_LANGUAGE,
     progress: ProgressFn | None = None,
 ) -> list[Pain]:
     system = prompts.with_language(prompts.EXTRACT_SYSTEM, language)
@@ -207,7 +210,10 @@ def _theme_block(theme: Theme, pains_by_id: dict[str, Pain], max_quotes: int = 3
 
 
 def map_opportunities(
-    provider: BaseProvider, themes: list[Theme], pains: list[Pain], context: str = "",
+    provider: BaseProvider,
+    themes: list[Theme],
+    pains: list[Pain],
+    context: str = "",
     language: str = DEFAULT_LANGUAGE,
 ) -> list[Opportunity]:
     if not themes:
@@ -238,8 +244,14 @@ def map_opportunities(
 
 
 def write_stories(
-    provider: BaseProvider, opportunities: list[Opportunity], themes: list[Theme], pains: list[Pain],
-    context: str = "", language: str = DEFAULT_LANGUAGE, top_n: int = 3, stories_per_opportunity: int = 2,
+    provider: BaseProvider,
+    opportunities: list[Opportunity],
+    themes: list[Theme],
+    pains: list[Pain],
+    context: str = "",
+    language: str = DEFAULT_LANGUAGE,
+    top_n: int = 3,
+    stories_per_opportunity: int = 2,
     progress: ProgressFn | None = None,
 ) -> list[UserStory]:
     system = prompts.with_language(prompts.STORY_SYSTEM, language)
@@ -252,7 +264,7 @@ def write_stories(
             progress(f"Writing stories for {opp.id}", i / max(len(selected), 1))
         pain_ids = [pid for tid in opp.theme_ids for pid in themes_by_id[tid].pain_ids]
         evidence = "\n".join(
-            f'- [{pid}] {pains_by_id[pid].persona}: {pains_by_id[pid].statement} '
+            f"- [{pid}] {pains_by_id[pid].persona}: {pains_by_id[pid].statement} "
             f'Quote: "{pains_by_id[pid].quote}"'
             for pid in pain_ids
         )
@@ -316,7 +328,14 @@ def run_discovery(
     opportunities = map_opportunities(provider, themes, pains, context, language)
 
     stories = write_stories(
-        provider, opportunities, themes, pains, context, language, top_n, stories_per_opportunity,
+        provider,
+        opportunities,
+        themes,
+        pains,
+        context,
+        language,
+        top_n,
+        stories_per_opportunity,
         stage("stories", 0.75, 0.25),
     )
     if progress:

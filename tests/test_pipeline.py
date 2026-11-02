@@ -11,33 +11,78 @@ def pain(statement, quote, persona="Receptionist", severity=3):
 
 def scripted():
     return {
-        "extract:a:0": {"pains": [
-            pain("Manual confirmations take hours.", "I lose two hours a day confirming appointments by hand.", severity=4),
-            pain("Invented pain.", "This sentence is not in the transcript.", severity=2),
-        ]},
-        "extract:b:0": {"pains": [
-            pain("No-shows happen.", "Patients don't show up", "Owner", 5),
-            pain("No visibility into no-shows.", "I can't see how often it happens.", "Owner", 3),
-        ]},
-        "cluster": {"themes": [
-            # P001 + P003 from different sources; P999 doesn't exist and must be dropped
-            {"title": "No-shows", "description": "d", "pain_ids": ["P003", "P001", "P999"]},
-            # P001 duplicated in a second theme: must stay only in the first one
-            {"title": "Visibility", "description": "d", "pain_ids": ["P004", "P001"]},
-        ]},
-        "opportunities": {"opportunities": [
-            {"title": "Low score", "how_might_we": "hmw", "theme_ids": ["T2"], "impact": 2,
-             "confidence": 2, "effort": 4, "rationale": "r", "hypothesis": "h"},
-            {"title": "High score", "how_might_we": "hmw", "theme_ids": ["T1", "T42"], "impact": 5,
-             "confidence": 4, "effort": 2, "rationale": "r", "hypothesis": "h"},
-            {"title": "Only unknown themes", "how_might_we": "hmw", "theme_ids": ["T42"], "impact": 5,
-             "confidence": 5, "effort": 1, "rationale": "r", "hypothesis": "h"},
-        ]},
-        "stories:O1": {"stories": [
-            {"title": "Auto confirm", "persona": "receptionist", "want": "auto confirmations",
-             "so_that": "I save time", "acceptance_criteria": [
-                 {"given": "g", "when": "w", "then": "t"}, {"given": "g2", "when": "w2", "then": "t2"}]},
-        ]},
+        "extract:a:0": {
+            "pains": [
+                pain(
+                    "Manual confirmations take hours.",
+                    "I lose two hours a day confirming appointments by hand.",
+                    severity=4,
+                ),
+                pain("Invented pain.", "This sentence is not in the transcript.", severity=2),
+            ]
+        },
+        "extract:b:0": {
+            "pains": [
+                pain("No-shows happen.", "Patients don't show up", "Owner", 5),
+                pain("No visibility into no-shows.", "I can't see how often it happens.", "Owner", 3),
+            ]
+        },
+        "cluster": {
+            "themes": [
+                # P001 + P003 from different sources; P999 doesn't exist and must be dropped
+                {"title": "No-shows", "description": "d", "pain_ids": ["P003", "P001", "P999"]},
+                # P001 duplicated in a second theme: must stay only in the first one
+                {"title": "Visibility", "description": "d", "pain_ids": ["P004", "P001"]},
+            ]
+        },
+        "opportunities": {
+            "opportunities": [
+                {
+                    "title": "Low score",
+                    "how_might_we": "hmw",
+                    "theme_ids": ["T2"],
+                    "impact": 2,
+                    "confidence": 2,
+                    "effort": 4,
+                    "rationale": "r",
+                    "hypothesis": "h",
+                },
+                {
+                    "title": "High score",
+                    "how_might_we": "hmw",
+                    "theme_ids": ["T1", "T42"],
+                    "impact": 5,
+                    "confidence": 4,
+                    "effort": 2,
+                    "rationale": "r",
+                    "hypothesis": "h",
+                },
+                {
+                    "title": "Only unknown themes",
+                    "how_might_we": "hmw",
+                    "theme_ids": ["T42"],
+                    "impact": 5,
+                    "confidence": 5,
+                    "effort": 1,
+                    "rationale": "r",
+                    "hypothesis": "h",
+                },
+            ]
+        },
+        "stories:O1": {
+            "stories": [
+                {
+                    "title": "Auto confirm",
+                    "persona": "receptionist",
+                    "want": "auto confirmations",
+                    "so_that": "I save time",
+                    "acceptance_criteria": [
+                        {"given": "g", "when": "w", "then": "t"},
+                        {"given": "g2", "when": "w2", "then": "t2"},
+                    ],
+                },
+            ]
+        },
     }
 
 

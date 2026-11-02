@@ -52,8 +52,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     run = sub.add_parser("run", help="Analyse your own transcripts (.txt/.md files or folders).")
     run.add_argument("paths", nargs="+", help="Files or folders with transcripts.")
-    run.add_argument("--provider", default=os.getenv("DISCOVERY_PROVIDER", "claude"),
-                     choices=["claude", "gemini", "ollama", "demo"])
+    run.add_argument(
+        "--provider",
+        default=os.getenv("DISCOVERY_PROVIDER", "claude"),
+        choices=["claude", "gemini", "ollama", "demo"],
+    )
     run.add_argument("--model", default=None, help="Override the provider's default model.")
     run.add_argument("--context", default="", help="One or two sentences about the product.")
     run.add_argument("--language", default=DEFAULT_LANGUAGE, help="Output language, e.g. 'English'.")
@@ -61,8 +64,9 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--stories", type=int, default=2, help="Stories per opportunity.")
     run.add_argument("--out", default="discovery_report.md", help="Markdown output path.")
     run.add_argument("--json", dest="json_out", default=None, help="Optional JSON output path.")
-    run.add_argument("--record", default=None,
-                     help="Save raw model responses to this file (used to build demo fixtures).")
+    run.add_argument(
+        "--record", default=None, help="Save raw model responses to this file (used to build demo fixtures)."
+    )
 
     demo = sub.add_parser("demo", help="Run the bundled example without an API key.")
     demo.add_argument("--out", default="discovery_report.md")
@@ -86,8 +90,13 @@ def main(argv: list[str] | None = None) -> int:
                 provider = RecordingProvider(provider, args.record)
             sources = load_sources(args.paths)
             report = run_discovery(
-                sources, provider, context=args.context, language=args.language,
-                top_n=args.top, stories_per_opportunity=args.stories, progress=_progress,
+                sources,
+                provider,
+                context=args.context,
+                language=args.language,
+                top_n=args.top,
+                stories_per_opportunity=args.stories,
+                progress=_progress,
             )
     except (ProviderError, FileNotFoundError, ValueError) as exc:
         print(f"Error: {exc}", file=sys.stderr)

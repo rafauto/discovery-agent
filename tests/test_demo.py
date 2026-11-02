@@ -31,7 +31,13 @@ def test_demo_report_is_complete_and_traceable():
 
 def test_markdown_contains_all_sections():
     md = to_markdown(demo_report())
-    for heading in ["## Opportunities (ranked)", "## User stories", "## Themes and evidence", "```mermaid", "```gherkin"]:
+    for heading in [
+        "## Opportunities (ranked)",
+        "## User stories",
+        "## Themes and evidence",
+        "```mermaid",
+        "```gherkin",
+    ]:
         assert heading in md
 
 
