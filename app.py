@@ -146,7 +146,7 @@ if report:
                  "Confidence": o.confidence, "Effort": o.effort, "Score": o.score}
                 for o in report.opportunities
             ],
-            hide_index=True, use_container_width=True,
+            hide_index=True, width="stretch",
         )
         for o in report.opportunities:
             with st.expander(f"{o.id} · {o.title}  —  score {o.score}"):
@@ -184,7 +184,7 @@ if report:
                      "Quote": p.quote, "Verified": "✅" if p.quote_verified else "⚠️", "Source": p.source}
                     for pid in t.pain_ids if (p := report.pain(pid))
                 ],
-                hide_index=True, use_container_width=True,
+                hide_index=True, width="stretch",
             )
 
     with t_export:
