@@ -9,7 +9,7 @@ description = "An AI agent for Product Owners: turns interview transcripts and u
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
-authors = [{ name = "rafauto" }]
+authors = [{ name = "Rafaela Uto" }]
 dependencies = [
     "pydantic>=2.6",
     "anthropic>=0.40",
