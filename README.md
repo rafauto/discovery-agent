@@ -5,6 +5,8 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-MVP%20complete-brightgreen)
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://discovery-agent.streamlit.app/)
+
 **An AI agent for Product Owners.** Paste customer interview transcripts or user feedback and get back:
 
 1. **Pains** — each with a verbatim quote, persona and severity
@@ -13,6 +15,8 @@
 4. **User stories** — INVEST stories with Given/When/Then acceptance criteria, **each one traceable back to the customer quotes behind it**
 
 Built with Python and the Claude API. Also runs on Gemini's free tier, on local models via Ollama, or in a **demo mode that needs no API key at all**.
+
+👉 **Try it live: [discovery-agent.streamlit.app](https://discovery-agent.streamlit.app/)** (opens in demo mode, no key needed).
 
 ![Discovery Agent demo: running the bundled example and browsing opportunities and user stories](docs/demo.gif)
 
