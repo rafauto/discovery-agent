@@ -1,0 +1,585 @@
+{
+  "recorded_with": "Claude Opus 5.5",
+  "responses": {
+    "extract:01_receptionist_dental:0": {
+      "pains": [
+        {
+          "statement": "Confirming tomorrow's appointments means sending dozens of WhatsApp messages by hand, which takes most of the morning.",
+          "quote": "One by one. I copy the name, the time, the dentist, paste it in a message and send it.",
+          "persona": "Receptionist",
+          "severity": 4
+        },
+        {
+          "statement": "Many patients ignore confirmation messages, so the receptionist has to follow up with phone calls.",
+          "quote": "Half of them don't answer. So in the afternoon I call the ones who didn't reply.",
+          "persona": "Receptionist",
+          "severity": 3
+        },
+        {
+          "statement": "Patients who confirmed still don't show up, leaving dentists idle.",
+          "quote": "And even when they say yes, some still don't come. Yesterday we had four no-shows.",
+          "persona": "Receptionist",
+          "severity": 5
+        },
+        {
+          "statement": "Offering a cancelled slot to people waiting for an earlier appointment is manual and too slow, so the slot usually goes unused.",
+          "quote": "I have to call each one and by the time someone says yes, the time has passed. Most of the time the slot just stays empty.",
+          "persona": "Receptionist",
+          "severity": 4
+        },
+        {
+          "statement": "Handling reschedule requests by phone is slow and keeps the line busy for other patients.",
+          "quote": "I have to check the dentist's agenda, the room, and it takes forever while the line is ringing again.",
+          "persona": "Receptionist",
+          "severity": 3
+        },
+        {
+          "statement": "Keeping a paper agenda alongside the software leads to double bookings.",
+          "quote": "Last month I booked two patients at the same time with him because the paper one wasn't updated.",
+          "persona": "Receptionist",
+          "severity": 4
+        }
+      ]
+    },
+    "extract:02_owner_physio:0": {
+      "pains": [
+        {
+          "statement": "Every no-show or late cancellation is professional time the clinic pays for and cannot bill.",
+          "quote": "If a patient doesn't show up, that's 50 minutes I'm paying the professional for and getting nothing.",
+          "persona": "Clinic owner",
+          "severity": 5
+        },
+        {
+          "statement": "The system has no report on no-shows or empty slots, so the owner rebuilds it in Excel at month end, when it's too late to act.",
+          "quote": "there's no report of who didn't come, which professional has more empty slots, which day of the week is worse.",
+          "persona": "Clinic owner",
+          "severity": 4
+        },
+        {
+          "statement": "Without data on patterns, the owner can't take targeted actions such as asking repeat no-show patients for a deposit.",
+          "quote": "If I knew a specific patient misses all the time, I'd ask for a deposit. Today I'm flying blind.",
+          "persona": "Clinic owner",
+          "severity": 3
+        },
+        {
+          "statement": "Each unit only sees its own agenda, so patients are turned away while the other unit has free slots.",
+          "quote": "the receptionist doesn't know that unit B has three free slots that afternoon. We lose the patient to a competitor because of that.",
+          "persona": "Clinic owner",
+          "severity": 4
+        },
+        {
+          "statement": "Cancellation fees are hard to enforce manually and create conflict with patients, so they are never charged.",
+          "quote": "The receptionist has to remember, call the patient, it creates conflict. In the end nobody charged it.",
+          "persona": "Clinic owner",
+          "severity": 2
+        },
+        {
+          "statement": "SMS reminders are expensive and patients don't answer them because they use WhatsApp.",
+          "quote": "it's expensive per message and the patients don't reply to SMS anyway.",
+          "persona": "Clinic owner",
+          "severity": 3
+        },
+        {
+          "statement": "Physiotherapists learn about cancellations only when they are already waiting, so they can't use the time.",
+          "quote": "They complain that they find out about cancellations only when they're already waiting for the patient.",
+          "persona": "Physiotherapist",
+          "severity": 3
+        }
+      ]
+    },
+    "extract:03_patient_parent:0": {
+      "pains": [
+        {
+          "statement": "Booking requires calling during a short window, and the line is often busy.",
+          "quote": "I called three times during my lunch break and the line was always busy.",
+          "persona": "Patient",
+          "severity": 4
+        },
+        {
+          "statement": "The clinic can only be reached during business hours, which overlap with the patient's own working hours.",
+          "quote": "At night, when I actually have time to organise the family's agenda, there's nobody there.",
+          "persona": "Patient",
+          "severity": 3
+        },
+        {
+          "statement": "Reminders sent two days before are too early to prevent a busy parent from forgetting.",
+          "quote": "two days before doesn't help me — I need a reminder on the day, a few hours before.",
+          "persona": "Patient",
+          "severity": 3
+        },
+        {
+          "statement": "Rescheduling requires another call, so the patient sometimes skips the appointment instead of cancelling.",
+          "quote": "Sometimes I just give up and don't go, which I know isn't fair to the clinic.",
+          "persona": "Patient",
+          "severity": 4
+        },
+        {
+          "statement": "Patients aren't told when the doctor is running late and wait a long time at the clinic.",
+          "quote": "Nobody told us the doctor was running late.",
+          "persona": "Patient",
+          "severity": 2
+        }
+      ]
+    },
+    "extract:04_receptionist_derma:0": {
+      "pains": [
+        {
+          "statement": "The schedule only blocks the doctor's time, not rooms or shared equipment, so the receptionist tracks the machine in a separate spreadsheet.",
+          "quote": "The system only blocks the doctor's time. So I keep a separate spreadsheet for the machine.",
+          "persona": "Receptionist",
+          "severity": 5
+        },
+        {
+          "statement": "Equipment conflicts make patients wait, leave and post bad public reviews.",
+          "quote": "One patient waited an hour and left. She posted a bad review on Google.",
+          "persona": "Receptionist",
+          "severity": 4
+        },
+        {
+          "statement": "Preparation instructions for procedures are sent by hand and sometimes forgotten, so the patient arrives unprepared and the slot is lost.",
+          "quote": "Sometimes I forget, and the patient arrives unprepared and we have to reschedule. The whole slot is lost.",
+          "persona": "Receptionist",
+          "severity": 4
+        },
+        {
+          "statement": "The waiting list for long procedure slots runs on a WhatsApp group, which is a privacy risk and chaotic.",
+          "quote": "I'm not supposed to use a group like that because of privacy. And whoever answers first gets it, it's chaos.",
+          "persona": "Receptionist",
+          "severity": 3
+        },
+        {
+          "statement": "Online self-booking could break procedure rules such as room, equipment or a required prior evaluation.",
+          "quote": "For procedures I'm afraid, because they'd book without the room or the machine, or without the evaluation they need first.",
+          "persona": "Receptionist",
+          "severity": 3
+        }
+      ]
+    },
+    "extract:05_patient_senior:0": {
+      "pains": [
+        {
+          "statement": "Apps with complex passwords and email verification codes lock out older patients.",
+          "quote": "It asked for a password with capital letters and numbers, and then it sent a code to an email I don't check. I gave up.",
+          "persona": "Patient (senior)",
+          "severity": 4
+        },
+        {
+          "statement": "Small text in apps is hard to read for older patients.",
+          "quote": "The letters are tiny too.",
+          "persona": "Patient (senior)",
+          "severity": 2
+        },
+        {
+          "statement": "Phone calls to the clinic often take long to be answered.",
+          "quote": "sometimes it takes a long time for them to answer, and I have to call back.",
+          "persona": "Patient (senior)",
+          "severity": 2
+        },
+        {
+          "statement": "Schedule changes are communicated only on arrival, so the patient makes a wasted trip.",
+          "quote": "I took two buses to get there for nothing.",
+          "persona": "Patient (senior)",
+          "severity": 4
+        }
+      ]
+    },
+    "extract:06_feedback_batch:0": {
+      "pains": [
+        {
+          "statement": "The owner still needs a spreadsheet to know the number of no-shows.",
+          "quote": "I still need a spreadsheet to know how many no-shows I had.",
+          "persona": "Clinic owner",
+          "severity": 3
+        },
+        {
+          "statement": "Sending WhatsApp confirmations one by one takes the receptionist's whole morning.",
+          "quote": "Sending confirmations one by one on WhatsApp takes my whole morning.",
+          "persona": "Receptionist",
+          "severity": 4
+        },
+        {
+          "statement": "Rooms are not part of the schedule, which allows double bookings of the same room.",
+          "quote": "Two patients were booked in the same room at 3pm because the room is not part of the schedule, only the professional.",
+          "persona": "Receptionist",
+          "severity": 4
+        },
+        {
+          "statement": "Patients can't reschedule without calling the clinic.",
+          "quote": "Impossible to reschedule without calling. I tried for two days.",
+          "persona": "Patient",
+          "severity": 4
+        },
+        {
+          "statement": "Owners can't see the agenda of their other unit.",
+          "quote": "I can't see the agenda of my other unit from this one.",
+          "persona": "Clinic owner",
+          "severity": 3
+        },
+        {
+          "statement": "A reminder one hour before the appointment is too late for the patient to reorganise.",
+          "quote": "Received the reminder at 7am for an appointment at 8am. Way too late to reorganise my day.",
+          "persona": "Patient",
+          "severity": 2
+        },
+        {
+          "statement": "Professionals only learn about a cancellation when they are already waiting.",
+          "quote": "I only know a patient cancelled when I'm already waiting for them.",
+          "persona": "Physiotherapist",
+          "severity": 3
+        },
+        {
+          "statement": "Password recovery fails, pushing patients back to the phone.",
+          "quote": "Created an account, forgot the password, the reset email never arrived.",
+          "persona": "Patient",
+          "severity": 3
+        },
+        {
+          "statement": "There's no quick way to offer a cancelled slot to the waiting list.",
+          "quote": "When someone cancels I have no fast way to offer the slot to the waiting list.",
+          "persona": "Receptionist",
+          "severity": 3
+        }
+      ]
+    },
+    "cluster": {
+      "themes": [
+        {
+          "title": "Confirmations and reminders don't work",
+          "description": "Confirming appointments is manual, costly and badly timed: front desks spend hours on it, many patients never answer, and reminders arrive too early or too late to change behaviour.",
+          "pain_ids": [
+            "P001",
+            "P002",
+            "P012",
+            "P016",
+            "P021",
+            "P029",
+            "P033"
+          ]
+        },
+        {
+          "title": "No-shows waste paid professional time",
+          "description": "Patients miss appointments even after confirming, and clinics have no practical way to discourage it, so paid professional hours go unbilled.",
+          "pain_ids": [
+            "P003",
+            "P007",
+            "P011"
+          ]
+        },
+        {
+          "title": "Cancelled slots are rarely refilled",
+          "description": "When a slot frees up, offering it to people who want an earlier time is manual, slow and sometimes privacy-unsafe, so the slot is usually lost.",
+          "pain_ids": [
+            "P004",
+            "P022",
+            "P036"
+          ]
+        },
+        {
+          "title": "Booking and rescheduling depend on the phone",
+          "description": "Patients can only book or move appointments by calling during business hours; lines are busy, receptionists are overloaded and some patients simply skip instead of rescheduling.",
+          "pain_ids": [
+            "P005",
+            "P014",
+            "P015",
+            "P017",
+            "P026",
+            "P031"
+          ]
+        },
+        {
+          "title": "Agenda ignores rooms and equipment",
+          "description": "The schedule only tracks professionals, so rooms, shared machines and procedure rules live in side spreadsheets or paper, causing double bookings and angry patients.",
+          "pain_ids": [
+            "P006",
+            "P019",
+            "P020",
+            "P023",
+            "P030"
+          ]
+        },
+        {
+          "title": "Units can't see each other's availability",
+          "description": "Multi-unit clinics run separate agendas, so a patient is turned away at one unit while another has free slots.",
+          "pain_ids": [
+            "P010",
+            "P032"
+          ]
+        },
+        {
+          "title": "Owners can't see where the agenda loses money",
+          "description": "There is no reporting on no-shows, idle slots or patterns, so owners rebuild numbers in Excel after the fact and can't act on them.",
+          "pain_ids": [
+            "P008",
+            "P009",
+            "P028"
+          ]
+        },
+        {
+          "title": "Changes and delays reach people too late",
+          "description": "Cancellations, delays and time changes are not communicated proactively, so professionals sit idle and patients wait or travel for nothing.",
+          "pain_ids": [
+            "P013",
+            "P018",
+            "P027",
+            "P034"
+          ]
+        },
+        {
+          "title": "Digital access excludes less tech-savvy patients",
+          "description": "Passwords, email codes and small text make apps unusable for some patients, who fall back to the phone.",
+          "pain_ids": [
+            "P024",
+            "P025",
+            "P035"
+          ]
+        }
+      ]
+    },
+    "opportunities": {
+      "opportunities": [
+        {
+          "title": "Patients confirm or release their slot without front-desk effort",
+          "how_might_we": "How might we get every patient to confirm or free their slot in time, without the receptionist sending a single message by hand?",
+          "theme_ids": [
+            "T1",
+            "T6"
+          ],
+          "impact": 5,
+          "confidence": 5,
+          "effort": 3,
+          "rationale": "Strongest signal in the research: mentioned in 5 of 6 sources by receptionists, owners and patients, with high severity (no-shows rated 5). Saves hours of receptionist time daily and directly protects revenue. WhatsApp is the channel every persona already uses.",
+          "hypothesis": "We believe that automatic WhatsApp confirmations sent at the right time for small clinics will reduce no-shows and manual work. We will know when the no-show rate drops by 30% and manual confirmation messages fall close to zero within 6 weeks."
+        },
+        {
+          "title": "Patients can book and reschedule by themselves, at any time",
+          "how_might_we": "How might we let patients book and move appointments when it suits them, without calling, and without excluding less digital patients?",
+          "theme_ids": [
+            "T2",
+            "T8"
+          ],
+          "impact": 5,
+          "confidence": 4,
+          "effort": 4,
+          "rationale": "Mentioned in 5 sources and closely linked to no-shows (patients skip instead of rescheduling). Effort is high because clinic rules (procedures, rooms) must be respected and the experience must work for seniors without passwords; effort estimate is uncertain.",
+          "hypothesis": "We believe that a password-free self-service link to book and reschedule for patients will reduce phone volume and silent no-shows. We will know when 40% of reschedules happen without a call."
+        },
+        {
+          "title": "Freed slots are refilled before they go to waste",
+          "how_might_we": "How might we offer a freed slot to the right waiting patient within minutes, fairly and without exposing personal data?",
+          "theme_ids": [
+            "T5",
+            "T6"
+          ],
+          "impact": 4,
+          "confidence": 3,
+          "effort": 2,
+          "rationale": "Raised by both receptionists and the feedback batch; especially painful for long procedure slots. Confidence is moderate (3 mentions) but effort is low if built on top of automated confirmations.",
+          "hypothesis": "We believe that automatically offering cancelled slots to a waiting list for receptionists will recover lost appointments. We will know when at least 30% of cancelled slots are refilled."
+        },
+        {
+          "title": "The agenda knows every resource a booking needs",
+          "how_might_we": "How might we make the schedule aware of rooms, equipment, units and procedure rules so that conflicts become impossible?",
+          "theme_ids": [
+            "T4",
+            "T9"
+          ],
+          "impact": 4,
+          "confidence": 4,
+          "effort": 4,
+          "rationale": "Double bookings are severe (lost patients, public bad reviews) and appear in 4 sources, but mostly in procedure-heavy and multi-unit clinics. Larger change to the scheduling core, so effort is high.",
+          "hypothesis": "We believe that resource-aware scheduling for clinics with procedures or several units will eliminate double bookings. We will know when resource conflicts reported to support drop to zero."
+        },
+        {
+          "title": "Everyone affected learns about changes as soon as they happen",
+          "how_might_we": "How might we tell patients and professionals about cancellations, delays and time changes the moment they happen?",
+          "theme_ids": [
+            "T3"
+          ],
+          "impact": 3,
+          "confidence": 4,
+          "effort": 2,
+          "rationale": "Mentioned in 4 sources by patients and physiotherapists. Lower business impact per event, but cheap to deliver once notifications exist, and it prevents wasted trips that damage trust.",
+          "hypothesis": "We believe that real-time change notifications for patients and professionals will reduce wasted trips and idle time. We will know when complaints about late notice disappear from NPS comments."
+        },
+        {
+          "title": "Owners see where the schedule loses money",
+          "how_might_we": "How might we show owners, without spreadsheets, how much the agenda loses and where?",
+          "theme_ids": [
+            "T7"
+          ],
+          "impact": 4,
+          "confidence": 3,
+          "effort": 2,
+          "rationale": "Comes from owners (the buyers) in an interview and an NPS 4 detractor; ties directly to retention. Fewer mentions so lower confidence; mostly reporting on data we already have.",
+          "hypothesis": "We believe that a no-show and occupancy dashboard for clinic owners will increase perceived value. We will know when owners' NPS rises and Excel exports drop."
+        }
+      ]
+    },
+    "stories:O1": {
+      "stories": [
+        {
+          "title": "Automatic WhatsApp confirmation request",
+          "persona": "receptionist",
+          "want": "the system to send each patient a WhatsApp confirmation request automatically before their appointment",
+          "so_that": "I stop spending my mornings sending messages by hand and can focus on patients at the desk",
+          "acceptance_criteria": [
+            {
+              "given": "an appointment scheduled for tomorrow at 10:00",
+              "when": "the configured send time arrives (default: 24 hours before)",
+              "then": "the patient receives a WhatsApp message with date, time, professional and Confirm / Reschedule / Cancel options"
+            },
+            {
+              "given": "the patient taps Confirm",
+              "when": "the reply is received",
+              "then": "the appointment status changes to Confirmed in the agenda without any action from the receptionist"
+            },
+            {
+              "given": "the patient has not replied",
+              "when": "4 hours have passed since the request",
+              "then": "a single follow-up message is sent and the appointment is highlighted as Unconfirmed in the agenda"
+            },
+            {
+              "given": "the patient has no valid WhatsApp number",
+              "when": "the request fails to send",
+              "then": "the appointment is flagged for a manual call and appears in the receptionist's to-do list"
+            }
+          ],
+          "notes": "Validate the default send time per clinic type (procedures may need 48h for preparation). Requires WhatsApp Business API costs to be checked against the SMS cost Marcos complained about."
+        },
+        {
+          "title": "Day-of reminder at a patient-friendly time",
+          "persona": "patient",
+          "want": "a reminder on the day of my appointment, a few hours before it",
+          "so_that": "I don't forget and still have time to reorganise my day if needed",
+          "acceptance_criteria": [
+            {
+              "given": "a confirmed appointment at 15:00",
+              "when": "it is 3 hours before the appointment",
+              "then": "I receive a WhatsApp reminder with the address and a Reschedule option"
+            },
+            {
+              "given": "an appointment before 10:00",
+              "when": "the reminder would fall before 07:00",
+              "then": "the reminder is sent at 19:00 the previous evening instead"
+            },
+            {
+              "given": "I already cancelled the appointment",
+              "when": "the reminder time arrives",
+              "then": "no reminder is sent"
+            }
+          ],
+          "notes": "Assumes the reminder window can be configured per clinic. Check whether the add-to-calendar link Juliana asked for fits in this story or a separate one."
+        }
+      ]
+    },
+    "stories:O2": {
+      "stories": [
+        {
+          "title": "Join the waiting list for an earlier slot",
+          "persona": "receptionist",
+          "want": "to add a patient to a waiting list for a professional or procedure with their preferred days and times",
+          "so_that": "I have an organised, private list to offer freed slots instead of a notebook or a WhatsApp group",
+          "acceptance_criteria": [
+            {
+              "given": "a patient asks for an earlier appointment",
+              "when": "I add them to the waiting list with professional, procedure and preferred periods",
+              "then": "they appear in the list ordered by request date"
+            },
+            {
+              "given": "a patient on the waiting list books a regular appointment",
+              "when": "the booking is saved",
+              "then": "they are removed from the waiting list automatically"
+            },
+            {
+              "given": "a receptionist without permission for patient data",
+              "when": "they open the waiting list",
+              "then": "only names and preferences are shown, never phone numbers of other patients"
+            }
+          ],
+          "notes": "Validate with Carla whether procedure prerequisites (prior evaluation) must be checked when adding to the list. LGPD: no shared groups."
+        },
+        {
+          "title": "Offer a cancelled slot to the waiting list automatically",
+          "persona": "receptionist",
+          "want": "a cancelled slot to be offered automatically to matching patients on the waiting list",
+          "so_that": "the slot gets refilled in minutes instead of staying empty",
+          "acceptance_criteria": [
+            {
+              "given": "a slot is cancelled at least 2 hours in advance",
+              "when": "there are matching patients on the waiting list",
+              "then": "the first 3 in order receive a WhatsApp offer with an Accept link"
+            },
+            {
+              "given": "two patients accept the same offer",
+              "when": "the second acceptance arrives",
+              "then": "the second patient is told the slot was taken and stays on the waiting list"
+            },
+            {
+              "given": "nobody accepts within 30 minutes",
+              "when": "the offer expires",
+              "then": "the next 3 patients on the list receive the offer"
+            },
+            {
+              "given": "the slot requires a room or machine",
+              "when": "the offer is created",
+              "then": "it is only offered if the resource is still free"
+            }
+          ],
+          "notes": "Depends on story US01 (WhatsApp messaging). Offer size and expiry time are assumptions to test."
+        }
+      ]
+    },
+    "stories:O3": {
+      "stories": [
+        {
+          "title": "Notify the professional when a patient cancels",
+          "persona": "physiotherapist",
+          "want": "to be notified as soon as one of my patients cancels",
+          "so_that": "I can use the time for paperwork or another patient instead of waiting",
+          "acceptance_criteria": [
+            {
+              "given": "a patient cancels today's appointment",
+              "when": "the cancellation is registered by the patient or the receptionist",
+              "then": "I receive a notification within 1 minute with the freed time"
+            },
+            {
+              "given": "the cancellation is for a future day",
+              "when": "it is registered",
+              "then": "it appears in my agenda but no instant notification is sent"
+            },
+            {
+              "given": "I have turned notifications off",
+              "when": "a patient cancels",
+              "then": "only the agenda is updated"
+            }
+          ],
+          "notes": "Channel for professionals (app push vs WhatsApp) to be validated."
+        },
+        {
+          "title": "Tell patients about delays and time changes before they leave home",
+          "persona": "patient",
+          "want": "to receive a message when my appointment is delayed or changed",
+          "so_that": "I don't wait for nothing or make a wasted trip",
+          "acceptance_criteria": [
+            {
+              "given": "the receptionist marks a professional as running 30 minutes late",
+              "when": "the delay is saved",
+              "then": "all patients for the next 2 hours receive a WhatsApp message with the new estimated time"
+            },
+            {
+              "given": "the clinic changes my appointment time",
+              "when": "the change is saved",
+              "then": "I receive a message with the new time and a Confirm / Reschedule option"
+            },
+            {
+              "given": "I don't confirm a time change",
+              "when": "2 hours have passed",
+              "then": "the receptionist sees an alert to call me"
+            }
+          ],
+          "notes": "Messages must use large, simple text and no login, so that senior patients like Pedro can act on them."
+        }
+      ]
+    }
+  }
+}

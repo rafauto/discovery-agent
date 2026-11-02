@@ -1,0 +1,5 @@
+# Used by Streamlit Community Cloud. For local development prefer: pip install -e ".[app,gemini,dev]"
+pydantic>=2.6
+anthropic>=0.40
+google-genai>=1.0
+streamlit>=1.35

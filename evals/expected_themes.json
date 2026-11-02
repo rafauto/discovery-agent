@@ -1,0 +1,14 @@
+{
+  "description": "Problem areas a human researcher found in examples/interviews. The eval checks whether the agent surfaces each one (recall) and whether its quotes are real (precision of evidence).",
+  "expected": [
+    {"area": "Manual appointment confirmations", "keywords": ["confirm"]},
+    {"area": "No-shows waste professional time", "keywords": ["no-show", "don't show", "doesn't show", "miss"]},
+    {"area": "Cancelled slots are not refilled", "keywords": ["waiting list", "refill", "slot stays empty", "cancelled slot", "freed slot"]},
+    {"area": "Booking and rescheduling require phone calls", "keywords": ["reschedul", "calling", "phone"]},
+    {"area": "Rooms and equipment are not in the schedule", "keywords": ["room", "equipment", "machine"]},
+    {"area": "Units can't see each other's agenda", "keywords": ["unit"]},
+    {"area": "Owners lack reporting", "keywords": ["report", "spreadsheet", "visibility", "excel"]},
+    {"area": "Changes and delays communicated too late", "keywords": ["delay", "running late", "time change", "wasted trip", "too late"]},
+    {"area": "Hard-to-use digital access for some patients", "keywords": ["password", "tiny", "small text", "tech-savvy"]}
+  ]
+}
