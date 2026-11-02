@@ -43,6 +43,12 @@ This agent automates the tedious part of that synthesis while keeping the PO in 
 - **Honest prioritisation.** Opportunities are scored on impact × confidence ÷ effort, with confidence tied to how many sources back them up.
 - **Problems, not solutions.** Prompts enforce discovery good practice: feature requests are translated into the underlying problem, and opportunities are phrased as customer needs.
 
+## Screenshots
+
+| Demo mode (no API key) | Your own material (Claude, Gemini or Ollama) |
+|---|---|
+| ![Demo mode home screen](docs/screenshots/app_demo_home.png) | ![Paste or upload transcripts](docs/screenshots/app_own_material.png) |
+
 ## Example output
 
 The repo ships with 6 **fictional** sources (5 interviews + 1 batch of NPS comments) about *ClinicFlow*, an imaginary scheduling app for small clinics. Full report: [`examples/output/discovery_report.md`](examples/output/discovery_report.md).
