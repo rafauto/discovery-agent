@@ -14,7 +14,7 @@
 
 Built with Python and the Claude API. Also runs on Gemini's free tier, on local models via Ollama, or in a **demo mode that needs no API key at all**.
 
-![Opportunity tree generated from the example interviews](docs/opportunity_tree.png)
+![Discovery Agent demo: running the bundled example and browsing opportunities and user stories](docs/demo.gif)
 
 **Status:** MVP complete and working end to end (CLI, web UI, demo mode, tests and CI). Next steps are listed in the [roadmap](#roadmap).
 
@@ -56,6 +56,8 @@ The repo ships with 6 **fictional** sources (5 interviews + 1 batch of NPS comme
 | Pains | Themes | Opportunities | User stories | Quotes verified |
 |---|---|---|---|---|
 | 36 | 9 | 6 | 6 | 36/36 |
+
+![Opportunity tree generated from the example interviews](docs/opportunity_tree.png)
 
 **Top opportunities**
 
