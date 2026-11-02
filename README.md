@@ -3,6 +3,7 @@
 [![CI](https://github.com/rafauto/discovery-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/rafauto/discovery-agent/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-MVP%20complete-brightgreen)
 
 **An AI agent for Product Owners.** Paste customer interview transcripts or user feedback and get back:
 
@@ -14,6 +15,20 @@
 Built with Python and the Claude API. Also runs on Gemini's free tier, on local models via Ollama, or in a **demo mode that needs no API key at all**.
 
 ![Opportunity tree generated from the example interviews](docs/opportunity_tree.png)
+
+**Status:** MVP complete and working end to end (CLI, web UI, demo mode, tests and CI). Next steps are listed in the [roadmap](#roadmap).
+
+## Tech stack
+
+| Area | Tools |
+|---|---|
+| Language | Python 3.10+ |
+| LLM | Claude API (Anthropic SDK), with Gemini (google-genai) and Ollama as alternatives |
+| Structured output | Pydantic v2 schemas + tool use / JSON mode |
+| Web UI | Streamlit |
+| CLI | argparse (no extra dependencies) |
+| Quality | pytest, a small eval script, GitHub Actions CI |
+| Diagrams | Mermaid |
 
 ---
 
@@ -157,6 +172,10 @@ tests/           Unit and end-to-end tests
 - [ ] Persona and journey-stage tagging
 - [ ] Audio upload with automatic transcription
 
+## Contributing
+
+Ideas, issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
-MIT
+[MIT](LICENSE)
